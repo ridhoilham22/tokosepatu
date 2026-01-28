@@ -39,7 +39,7 @@ if ($result_kategori) {
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
                     <tr>
-                        <th style="width:5%">#</th>
+                        <th style="width:5%">No</th>
                         <th style="width:25%">Nama Sepatu</th>
                         <th style="width:20%">Kategori</th>
                         <th>Merek</th>

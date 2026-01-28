@@ -15,19 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     response("error", "Gunakan metode GET.!!");
 }
 
-$result = $mysqli->query("
-    SELECT id_sepatu, nama_sepatu, merek, gambar_sepatu 
-    FROM sepatu 
-    ORDER BY id_sepatu DESC
-");
+$result = $mysqli->query("SELECT id_sepatu, nama_sepatu, merek, gambar_sepatu FROM sepatu ORDER BY id_sepatu DESC");
 
 $daftar = [];
 while ($row = $result->fetch_assoc()) {
     $daftar[] = [
         "id_sepatu" => $row['id_sepatu'],
         "nama_sepatu" => $row['nama_sepatu'],
-        "merek" => $row['merek'],
-        "gambar" => "http://10.103.198.13/tokosepatu/uploads/" . $row['gambar_sepatu']
+        "merek" => $row['merek'],  
+        "gambar_sepatu" => "http://10.219.223.13/tokosepatu/uploads/" . $row['gambar_sepatu']
     ];
 }
 
